@@ -17,8 +17,5 @@ RUN set -ex && \
     git clone https://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim && \
     vim +PluginInstall +qall
 
-#RUN go install -v golang.org/x/tools/gopls@latest && \
-#    go install -v github.com/ramya-rao-a/go-outline@latest
-
 RUN echo "PS1='\[\e[1;33m\]\u@\[\e[m\]\[\e[1;32m\]\h:\[\e[m\]\[\e[1;36m\]\w$ \[\e[m\]'" >> /root/.bashrc && \
     echo "alias la='ls -lA --color=auto'" >> /root/.bashrc
