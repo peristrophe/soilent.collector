@@ -2,6 +2,8 @@ FROM golang:1.22.0-bookworm as base
 
 FROM base as development
 
+ENV GOPRIVATE github.com/peristrophe/*
+
 RUN set -ex && \
     apt-get update && \
     apt-get install -y --no-install-recommends \
